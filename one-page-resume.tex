@@ -1,0 +1,170 @@
+\documentclass{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{tabularx} % in the preamble
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{titlesec}
+\usepackage[top=5mm,left=10mm,right=10mm,bottom=0mm]{geometry}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{
+		{\Huge  \textsc{Aditya Gajbhiye}
+	}\par}
+
+\begin{tabularx}{\textwidth}{Xl}
+    $4^{th}$ Year UG, Dept. of Computer Science, IIT Kanpur &
+    \textsc{Phone:}     +91-7755057618\\
+    \textsc{email:}     adityagj@iitk.ac.in, aditya.gajbhiye.20@gmail.com  &
+    \textsc{Github Profile:}   \href{https://github.com/adigajbhiye}{AdiGajbhiye}\\
+\end{tabularx}
+\vspace{-5mm}
+\section{Educational Qualifications}
+\centering
+\begin{tabularx}{\textwidth}{|X|X|X|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\hline
+\textbf{Year} & \textbf{Degree/Certificate} & \textbf{Institute/Board} & \textbf{CPI/\%} \\ \hline
+2014-Current  & B.Tech., CSE                & IIT Kanpur               & 7.4/10          \\ \hline
+2014          & Maharashtra SSC                      & State Board Maharashtra  & 91\%          \\ \hline
+2012          & Matriculation               & CBSE                     & 9.8/10          \\ \hline
+\end{tabularx}
+\vspace{-2mm}
+\section{Internships}
+\begin{tabularx}{\textwidth}{Xl}
+    \textbf{JAVA Developer} & \textit{May 8, 2017 - July 14, 2017} \\
+    \textbf{VMware} & Bangalore, India
+\end{tabularx}
+\begin{flushleft}
+\begin{itemize}
+	\vspace{-2mm} \setlength\itemsep{-0.5em}
+    \item Developed Kubernetes cluster monitoring and alerting system.
+    \item Improved performance by reducing workload, increased robustness, performed testing using Mockito.
+    \item Learned Kubernetes architecture and vROps Adapter SDK as a part of development process.
+    \item Followed Agile development methodology.
+\end{itemize}
+\end{flushleft}
+\begin{tabularx}{\textwidth}{Xl}
+    \textbf{Full-Stack Developer} & \textit{May 9, 2016 - July 8, 2016} \\
+    \textbf{AxisRooms} & Bangalore, India
+\end{tabularx}
+\begin{flushleft}
+\begin{itemize}
+	\vspace{-2mm} \setlength\itemsep{-0.5em}
+    \item Built a web based GUI to on-board customers which earlier was done manually with scripts. 
+    \item Uses angularjs as front-end, nodejs \& express as back-end and mongodb as database(MEAN Stack).
+    \item Successfully increase efficiency and productivity of on-boarding process with simple interface.
+    \item Developed RESTful APIs for all CRUD operations.
+\end{itemize}
+\end{flushleft}
+\vspace{-2mm}
+\section{Projects}
+\begin{tabularx}{\textwidth}{Xl}
+	      \textbf{KeyboardNinja Ruby on Rails Game(Self-Project)}
+	      & \textit{October 2016}
+	      \end{tabularx}
+	      \begin{itemize}
+		\vspace{-2mm} \setlength\itemsep{-0.5em}
+		\item An online multiplayer typing game build on Ruby on Rails.
+		\item Developed RESTful APIs for creating, joining games, getting result and updating players current position.
+		\item Built and deployed using Ruby on Rails, Coffeescript, MySql, Postgres, AJAX, jQuery and Heroku.
+		\item Read ``Learn Web Development with Rails'' by Michael Hartl and grasped the basics of Rails.
+	      \end{itemize}
+\begin{tabularx}{\textwidth}{Xl}
+	      \textbf{College Festival APP(Android)}
+	     & \textit{May 2015 - Oct 2015}
+	      \end{tabularx}
+	      \begin{itemize}
+	      	\vspace{-2mm} \setlength\itemsep{-0.5em}
+	      	\item Built the Android application for the college cultural festival, Antaragni.
+	      	\item Users can view schedule, event details, venue map and contact details of event organizer.
+	      	\item Notifications, Result declaration, Reminders are provided through GCM.
+	      	\item Licensed under Apache License. App is designed to be usable for other events.
+	      \end{itemize}
+\begin{tabularx}{\textwidth}{Xl}
+	 \textbf{Hostel Room Allocation} (CS252 Project)
+	 & \textit{November 2016}
+	 \end{tabularx}
+\begin{itemize}
+\vspace{-2mm} \setlength\itemsep{-0.5em}
+\item Developed an application for allocating rooms based on students' preferences.
+\item Solved taking inspiration from Stable marriage and Hungarian algorithms.
+\item Developed using MEAN stack and python, including libraries like Passport(authentication) and Bcrypt(encryption).
+\end{itemize}
+\begin{tabularx}{\textwidth}{X}
+	  \textbf{Perl Compiler} (CS335 Project) - Developed Perl compiler using Python.\\
+	  \textbf{DBMS-UI} (CS315 Project) - Developed Qt-based GUI for performing queries on MySQL server.\\
+      \textbf{De Bruijn Sequences} (CS201 Project) - Study and understand the creation of de bruijn sequences, their real life
+applications and using them to do mathematics based card tricks.
+\end{tabularx}
+\vspace{-4mm}
+\section{Technical skills}
+\begin{itemize}
+	\setlength\itemsep{-0.5em}
+    \item  Programming Languages: C | C++ | JAVA | Python | Ruby | Perl
+    \item  Web Development: HTML | CSS | PHP | JavaScript | Typescript | AngularJS | NodeJS | Express | BootStrap | MongoDB | MySQL
+    \item  Technologies: Kubernetes | Docker | Tensorflow | Git | Perforce | Android Studio | vROps Adapter SDK
+    \item  Operating Systems/Tools: Linux (Arch Linux \& Ubuntu) | Windows | Sublime | Visual Studio Code | Vim | Latex | Eclipse
+\end{itemize}
+\vspace{-2mm}
+\section{Relevent Courses}
+\centering{}
+\begin{tabular}{l|l|l}
+CS-771 Machine Learning * & CS-425 Computer Networks * & CS-628 Computer Security \\
+CS-315 Principles of Database Systems  & CS-210 Data Structures and Algorithms & CS-345 Design and Analysis of Algorithm\\
+CS-330 Operating Systems & CS-335 Compiler Design & CS-340 Theory of Computation\\
+\end{tabular}
+\begin{flushright}
+\textit{* - ongoing}
+\end{flushright}
+
+\end{document}
